@@ -1,0 +1,60 @@
+<html>
+<head>
+<title> Calculator </title>
+<style>
+
+button{
+background-color:pink;
+}
+
+body{
+margin-top:200px;
+}
+</style>
+
+<script>
+
+function add(){
+var num1,num2,sum;
+var num1=parseInt(document.getElementById("n1").value);
+var num2=parseInt(document.getElementById("n2").value);
+sum=num1+num2;
+document.getElementById("res").value=sum;
+}
+
+function sub(){
+var num1,num2,diff;
+var num1=parseInt(document.getElementById("n1").value);
+var num2=parseInt(document.getElementById("n2").value);
+var diff=num1-num2;
+document.getElementById("res").value=diff;
+}
+
+function reset(){
+document.getElementById("n1").value=" ";
+document.getElementById("n2").value=" ";
+document.getElementById("res").value=" ";
+}
+
+</script>
+</head>
+
+<body>
+<center>
+<h1><u><b> Calculator </b></u></h1>
+
+NUM1 : <input type="number" id="n1"/>
+<br/> <br/>
+NUM1 : <input type="number" id="n2"/>
+<br/> <br/>
+
+<button onclick="add()"> + </button>
+<button onclick="sub()"> - </button>
+<button onclick="reset()"> C </button>
+
+<br/> <br/>
+
+RESULT : <input id="res"/>
+</center>
+</body>
+</html>
